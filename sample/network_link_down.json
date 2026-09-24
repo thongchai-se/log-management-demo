@@ -1,0 +1,15 @@
+{
+  "tenant": "demoA",
+  "source": "network",
+  "vendor": "demo",
+  "product": "router",
+  "event_type": "link-down",
+  "host": "r1",
+  "severity": 4,
+  "action": "alert",
+  "@timestamp": "2025-08-20T13:01:02Z",
+  "_tags": ["syslog", "carrier-loss"],
+  "raw": {
+    "message": "<190>Aug 20 13:01:02 r1 if=ge-0/0/1 event=link-down mac=aa:bb:cc:dd:ee:ff reason=carrier-loss"
+  }
+}

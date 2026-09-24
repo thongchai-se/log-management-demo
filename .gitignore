@@ -1,18 +1,32 @@
 # Python
-venv/
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+venv/
+backend/venv/
 
 # Node
 node_modules/
+client/dist/
 dist/
 
-# Environment
+# Env / secrets
 .env
+*.pem
+deploy/nginx/certs/*.crt
+deploy/nginx/certs/*.key
+!deploy/nginx/certs/.gitkeep
 
-# IDE
+# IDE / OS
+.idea/
 .vscode/
-
-# OS
 .DS_Store
 Thumbs.db
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+*.log

@@ -1,38 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #eef1f4;
-  --bg-elevated: #ffffff;
-  --bg-muted: #f5f7f9;
-  --border: #d5dde6;
-  --text: #3d4a57;
-  --text-h: #14202b;
-  --text-muted: #6b7a8a;
-  --accent: #0d7a6f;
-  --accent-hover: #0a635a;
-  --accent-soft: #e4f3f1;
-  --danger: #b42318;
-  --danger-soft: #fef3f2;
-  --warning: #b54708;
-  --warning-soft: #fffaeb;
-  --sev-1: #5b6b7c;
-  --sev-2: #0b6e99;
-  --sev-3: #b54708;
-  --sev-4: #c4320a;
-  --sev-5: #b42318;
-  --shadow: 0 1px 2px rgba(20, 32, 43, 0.06), 0 8px 24px rgba(20, 32, 43, 0.04);
-  --radius: 10px;
-  --sans: 'IBM Plex Sans', 'Segoe UI', sans-serif;
-  --mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
-  --focus: 0 0 0 3px rgba(13, 122, 111, 0.28);
+  --bg: #e6ebf1;
+  --bg-elevated: #f3f6f9;
+  --panel: #ffffff;
+  --line: #c5ced9;
+  --line-soft: #dde3ea;
+  --text: #152033;
+  --text-2: #3a4a5e;
+  --muted: #5f6f82;
+  --navy: #13233f;
+  --navy-2: #1a2d4a;
+  --accent: #1f5699;
+  --accent-hover: #18467e;
+  --accent-soft: #e7eef7;
+  --chart-1: #1f5699;
+  --chart-2: #3a6fad;
+  --chart-3: #5a87bd;
+  --chart-4: #7fa0c9;
+  --chart-5: #a8bdd8;
+  --danger: #a61b12;
+  --danger-soft: #fdf0ef;
+  --warn: #9a3f06;
+  --warn-soft: #fff6e8;
+  --ok: #056640;
+  --ok-soft: #eaf8f0;
+  --shadow: 0 1px 0 rgba(21, 32, 51, 0.04);
+  --radius: 6px;
+  --sans: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', Consolas, monospace;
 
-  font: 15px/1.45 var(--sans);
   color: var(--text);
   background: var(--bg);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.45;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -44,41 +49,74 @@
 html,
 body,
 #root {
-  min-height: 100%;
-}
-
-body {
+  height: 100%;
   margin: 0;
 }
 
-#root {
-  min-height: 100svh;
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+}
+
+/* Native bars stay invisible so they never reserve gutter width. */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.overlay-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.overlay-scrollbar-thumb {
+  width: 6px;
+  margin-left: 3px;
+  border-radius: 999px;
+  background: rgba(19, 35, 63, 0.28);
+  transition: background 0.12s ease;
+}
+
+.overlay-scrollbar-thumb:hover,
+.overlay-scrollbar-thumb:active {
+  background: rgba(19, 35, 63, 0.48);
 }
 
 h1,
 h2,
-h3 {
-  font-family: var(--sans);
-  font-weight: 600;
-  color: var(--text-h);
-  margin: 0;
-}
-
+h3,
 p {
   margin: 0;
 }
 
 button,
-input {
+input,
+select,
+textarea {
   font: inherit;
 }
 
 ::selection {
   background: var(--accent-soft);
-  color: var(--text-h);
+  color: var(--text);
 }
 
 :focus-visible {
-  outline: none;
-  box-shadow: var(--focus);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
