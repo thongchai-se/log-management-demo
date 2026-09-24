@@ -4,13 +4,15 @@
 
 ## รูปแบบที่แนะนำ
 
-1. สร้าง VM คลาวด์ (Ubuntu 22.04+, 4 vCPU / 8 GB RAM) เช่น AWS Lightsail/EC2, Azure VM, GCP หรือ DigitalOcean
+1. สร้าง VM คลาวด์ (Ubuntu 22.04+, แนะนำอย่างน้อย 2 GB RAM) เช่น AWS EC2 / Lightsail, Azure VM, GCP หรือ DigitalOcean
 2. เปิดไฟร์วอลล์ / Security Group:
    - TCP **80**, **443**
    - UDP **5514** (รับ syslog)
 3. ติดตั้ง Docker และ Docker Compose
 4. Clone ที่เก็บโค้ดนี้
 5. ใช้ใบรับรองจริง หรือ self-signed พร้อมระบุขั้นตอนยอมรับคำเตือนในเบราว์เซอร์
+
+คู่มือ AWS แบบละเอียด: [setup_aws.md](setup_aws.md)
 
 ## Deploy
 

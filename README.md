@@ -61,6 +61,7 @@ Makefile  run.sh  run.ps1  .env.example
 - [สถาปัตยกรรมและ tenant model](docs/architecture.md)
 - [ติดตั้งโหมด Appliance](docs/setup_appliance.md)
 - [ติดตั้งโหมด SaaS / คลาวด์](docs/setup_saas.md)
+- [ติดตั้งบน AWS EC2](docs/setup_aws.md)
 
 ## API (สรุป)
 
